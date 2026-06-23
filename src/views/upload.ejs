@@ -93,6 +93,7 @@
                     <button
                         type="submit"
                         class="btn btn-primary w-100"
+                        id="uploadBtn"
                     >
                         Upload Image
                     </button>
@@ -102,6 +103,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+    document.querySelector("form").addEventListener("submit", function () {
+        const btn = document.getElementById("uploadBtn");
+
+        btn.disabled = true;
+        btn.innerText = "Uploading...";
+    });
+</script>
 
 </body>
 </html>
