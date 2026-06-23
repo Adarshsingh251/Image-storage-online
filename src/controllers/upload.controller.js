@@ -30,4 +30,4 @@ async function getimage(req,res){
     res.render("mainPage",{images})
 }
 
-module.exports = {ImageUploader,getimage,getForm,rootRoute};
+module.exports = {ImageUploader,getimage,getForm};
