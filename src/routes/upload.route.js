@@ -5,8 +5,6 @@ const multer = require("multer");
 const upload = multer({storage:multer.memoryStorage()});
 const router = express.Router();
 
-router.get("/",rootRoute)
-
 router.post("/upload",upload.single("image"),ImageUploader);
 
 router.get("/allimage",getimage);
