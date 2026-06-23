@@ -19,7 +19,7 @@ async function ImageUploader(req,res){
     //     resp:resp
     // })
 
-    res.redirect("http://localhost:3000/api/allimage")
+    res.redirect("/api/allimage")
 
 }   
 
