@@ -30,5 +30,7 @@ async function getimage(req,res){
     res.render("mainPage",{images})
 }
 
-
-module.exports = {ImageUploader,getimage,getForm};
+function rootRoute(req, res){
+    res.redirect("/api/allimage");
+}
+module.exports = {ImageUploader,getimage,getForm,rootRoute};

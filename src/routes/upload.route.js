@@ -1,9 +1,11 @@
 let express = require("express");
-let {ImageUploader,getimage,getForm} = require("../controllers/upload.controller")
+let {ImageUploader,getimage,getForm,rootRoute} = require("../controllers/upload.controller")
 const multer = require("multer");
 
 const upload = multer({storage:multer.memoryStorage()});
 const router = express.Router();
+
+router.get("/",rootRoute)
 
 router.post("/upload",upload.single("image"),ImageUploader);
 
